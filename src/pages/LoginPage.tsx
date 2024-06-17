@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import Poster from "../../public/bg.jpg";
 import ThemeButton from "./components/ThemeButton";
+import Carousel from "./components/Carousel";
 
 export default function LoginPage() {
   return (
@@ -70,9 +71,10 @@ export default function LoginPage() {
           </Link>
         </div>
       </div>
-      <div className="pointer-events-none relative hidden h-screen select-none bg-black md:block md:w-[70%]">
+
+      <div className="relative hidden h-screen select-none bg-black md:block md:w-[70%]">
         <div className="absolute z-10 px-8 text-black opacity-100 top-8 w-[55%] left-12">
-          <h2 className="mb-8 text-[1.75rem] font-bold leading-7">
+          <h2 className="mb-8 text-[1.75rem] font-bold leading-7 top-0 left-0 text-black z-10">
             Heading Of The Login Page And It Is The Demo Heading
           </h2>
           <p className="">
@@ -104,11 +106,7 @@ export default function LoginPage() {
             </span>
           </button>
         </div>
-        <Image
-          className="-z-1 absolute top-0 h-full w-full object-cover"
-          src={Poster}
-          alt="poster"
-        />
+        <Carousel />
       </div>
     </div>
   );
