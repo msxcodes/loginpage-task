@@ -12,7 +12,7 @@ export default function ThemeButton() {
     }
   };
 
-  document.querySelector("html")?.setAttribute("data-theme", theme);
+  document?.querySelector("html")?.setAttribute("data-theme", theme);
 
   return (
     <label className="cursor-pointer grid place-items-center">
