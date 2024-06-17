@@ -2,11 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Poster from "../../public/bg.jpg";
+import ThemeButton from "./components/ThemeButton";
 
 export default function LoginPage() {
   return (
     <div className="flex flex-wrap">
-      <div className="flex w-full flex-col md:w-[30%] h-screen bg-slate-100">
+      <div className="flex w-full flex-col items-end md:w-[30%] h-screen">
+        <div className="mt-4 mr-8">
+          <ThemeButton />
+        </div>
         <div className="lg:w-[28rem] mx-auto my-auto flex flex-col justify-center pt-8 md:justify-start md:px-6 md:pt-0">
           <p className="text-center text-2xl font-bold text-blue-600 ">
             Login to your account
@@ -16,13 +20,13 @@ export default function LoginPage() {
               <div className="mb-4">
                 <label
                   htmlFor="email"
-                  className="mb-4 font-bold inline-block text-sm text-black"
+                  className="mb-4 font-bold inline-block text-sm "
                 >
                   Enter Email Address
                 </label>
                 <input
                   type="text"
-                  className="block w-full cursor-text appearance-none bg-transparent rounded-md border border-gray-400 bg--100 py-2 px-3 text-sm outline-none focus:border-indigo-500 focus:bg-white focus:text-gray-600 focus:shadow placeholder:text-gray-600"
+                  className="block w-full cursor-text appearance-none bg-transparent rounded-md border py-2 px-3 text-sm outline-none focus:border-blue-500  focus:shadow "
                   id="email"
                   name="email-username"
                   placeholder="Email *"
@@ -33,13 +37,13 @@ export default function LoginPage() {
               <div className="mb-4">
                 <label
                   htmlFor="email"
-                  className="mb-4 font-bold inline-block text-sm text-black"
+                  className="mb-4 font-bold inline-block text-sm "
                 >
                   Enter Your Password
                 </label>
                 <input
                   type="text"
-                  className="block w-full cursor-text appearance-none rounded-md border bg-transparent border-gray-400 bg--100 py-2 px-3 text-sm outline-none focus:border-indigo-500 focus:bg-white focus:text-gray-600 focus:shadow placeholder:text-gray-600"
+                  className="block w-full cursor-text appearance-none rounded-md border bg-transparent py-2 px-3 text-sm outline-none focus:border--500 focus:shadow "
                   id="email"
                   name="email-username"
                   placeholder="Password *"
@@ -60,7 +64,7 @@ export default function LoginPage() {
             </button>
           </form>
           <Link href={"#"} className="py-6 text-left">
-            <p className="whitespace-nowrap text-sm text-black hover:text-blue-600 hover:underline">
+            <p className="whitespace-nowrap text-sm hover:text-blue-600 hover:underline">
               Create a free account?
             </p>
           </Link>
